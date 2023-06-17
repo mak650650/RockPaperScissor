@@ -54,7 +54,7 @@ let winner = "";
 
 // REPLAY
 play_button.addEventListener('click', ()=>{
-    if (button_input === "REPLAY" || button_input === "GAME ON/REPLAY") {
+    if (button_input === "REPLAY") {
         location.reload(); 
     }
     
