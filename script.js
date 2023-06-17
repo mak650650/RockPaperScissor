@@ -50,17 +50,6 @@ let computers_win = 0;
 let users_win = 0;
 let draw_count = 0 ;
 let winner = "";
-
-
-// REPLAY
-play_button.addEventListener('click', ()=>{
-    if (button_input === "REPLAY") {
-        location.reload(); 
-    }
-    
-});
-
-
 document.addEventListener('keydown',(event)=>{
     let begin = start();
     //computer logic
@@ -105,8 +94,7 @@ document.addEventListener('keydown',(event)=>{
 
                 // output
                 document.querySelectorAll(".status")[0].children[0].textContent = "There will be total "+turns+" turns";
-                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON/REPLAY";
-                button_input = "GAME ON/REPLAY";
+                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON";
 
             }else if (key === 'p' ||  key === 'P') {
                 computer_input = arr[(Math.floor(Math.random() * arr.length))];
@@ -138,8 +126,7 @@ document.addEventListener('keydown',(event)=>{
                  // output
                 
                 document.querySelectorAll(".status")[0].children[0].textContent = "There will be total "+turns+" turns";
-                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON/REPLAY";
-                button_input = "GAME ON/REPLAY";
+                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON";
 
             } else if(key === 's' ||  key === 'S'){
                 computer_input = arr[(Math.floor(Math.random() * arr.length))];
@@ -172,8 +159,7 @@ document.addEventListener('keydown',(event)=>{
                 // output
                 
                 document.querySelectorAll(".status")[0].children[0].textContent = "There will be total "+turns+" turns";
-                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON/REPLAY";
-                button_input = "GAME ON/REPLAY";
+                document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = "GAME ON";
 
             }else{
                 alert('wrong input');
@@ -195,3 +181,10 @@ document.addEventListener('keydown',(event)=>{
 }
 });
 
+// REPLAY
+play_button.addEventListener('click', ()=>{
+    if (button_input === "REPLAY") {
+        location.reload(); 
+    }
+    
+});
