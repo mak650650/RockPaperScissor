@@ -4,7 +4,7 @@ let button_input = document.querySelectorAll(".play-button")[0].children[0].chil
 function start(){
     play_button.addEventListener('click', ()=>{
         if (button_input === 'PLAY!'){
-                button_input = "GAME BEGAIN";
+                button_input = "r-ROCK,p-Paper,s-Scissor";
                 document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = button_input;
                 
         }
@@ -38,7 +38,7 @@ function game_logic(computer_input,user_input){
     }if(computer_input === user_input){
         winner = "draw";
     }if(winner === ""){
-        console.log("fgf");
+        console.log("error");
     }
     return winner;
 }
@@ -56,7 +56,7 @@ document.addEventListener('keydown',(event)=>{
     
     
     
-    if(begin === "GAME BEGAIN"){
+    if(begin === "r-ROCK,p-Paper,s-Scissor"){
         let status = document.querySelectorAll(".status")[0].children[0].style;
         status.position = "fixed";
         status.fontSize = "50px";
