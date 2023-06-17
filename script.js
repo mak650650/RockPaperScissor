@@ -174,7 +174,7 @@ document.addEventListener('keydown',(event)=>{
                 button_input = "REPLAY";
                 document.querySelectorAll(".play-button")[0].children[0].children[0].textContent = button_input;
 
-            }, 2000);
+            }, 5000);
             
         
         }
